@@ -24,10 +24,49 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    
+    //MARK: Actions
+    //===========================================================================
+    //===========================================================================
+    
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        
+        clearTextFields()
+        closeKeyboard()
+        print("register pressed")
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+        clearTextFields()
+        closeKeyboard()
+        print("login pressed")
+    }
+    
+    
+    
+    
+    
+    
+    
+    //MARK: Methods
+    //===========================================================================
+    //===========================================================================
+    
     func setDelegates() {
         emailTextField.delegate      = self
         passwordTextField.delegate   = self
         repasswordTextField.delegate = self
+    }
+    
+    func closeKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    func clearTextFields() {
+        emailTextField.text         = ""
+        passwordTextField.text      = ""
+        repasswordTextField.text    = ""
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -38,12 +77,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
 
-    @IBAction func registerButtonPressed(_ sender: UIButton) {
-        print("register pressed")
-    }
     
-    @IBAction func loginButtonPressed(_ sender: UIButton) {
-        print("login pressed")
-    }
+    
+    
+
 }
 
