@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -20,14 +20,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setDelegates()
+    }
+    
+    
+    func setDelegates() {
+        emailTextField.delegate      = self
+        passwordTextField.delegate   = self
+        repasswordTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        
+        print("register pressed")
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        
+        print("login pressed")
     }
 }
 
