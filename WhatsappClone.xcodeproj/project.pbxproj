@@ -12,6 +12,11 @@
 		008A80B221F5E54400E2A8B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008A80B021F5E54400E2A8B5 /* Main.storyboard */; };
 		008A80B421F5E54500E2A8B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008A80B321F5E54500E2A8B5 /* Assets.xcassets */; };
 		008A80B721F5E54500E2A8B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008A80B521F5E54500E2A8B5 /* LaunchScreen.storyboard */; };
+		00B1527C21F621440016D197 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B1527B21F621430016D197 /* GoogleService-Info.plist */; };
+		00B1527E21F6243B0016D197 /* FUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1527D21F6243A0016D197 /* FUser.swift */; };
+		00B1528021F62A6B0016D197 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1527F21F62A6B0016D197 /* Constants.swift */; };
+		00B1528221F64CE10016D197 /* CollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1528121F64CE10016D197 /* CollectionReference.swift */; };
+		00B1528521F652BB0016D197 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1528421F652BB0016D197 /* HelperFunctions.swift */; };
 		3B6A5255501BF5EC94327531 /* Pods_WhatsappClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BD50910FEDBFAE340BBB3B /* Pods_WhatsappClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +28,11 @@
 		008A80B321F5E54500E2A8B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		008A80B621F5E54500E2A8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		008A80B821F5E54500E2A8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00B1527B21F621430016D197 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		00B1527D21F6243A0016D197 /* FUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUser.swift; sourceTree = "<group>"; };
+		00B1527F21F62A6B0016D197 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		00B1528121F64CE10016D197 /* CollectionReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReference.swift; sourceTree = "<group>"; };
+		00B1528421F652BB0016D197 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		8879B6E6D8D3966341600BC6 /* Pods-WhatsappClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.debug.xcconfig"; sourceTree = "<group>"; };
 		89BD50910FEDBFAE340BBB3B /* Pods_WhatsappClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsappClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C304B9BB01A09F9F7216D4D /* Pods-WhatsappClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,14 +71,27 @@
 		008A80AB21F5E54400E2A8B5 /* WhatsappClone */ = {
 			isa = PBXGroup;
 			children = (
+				00B1528321F64CE60016D197 /* Helper */,
 				008A80AC21F5E54400E2A8B5 /* AppDelegate.swift */,
 				008A80AE21F5E54400E2A8B5 /* ViewController.swift */,
 				008A80B021F5E54400E2A8B5 /* Main.storyboard */,
 				008A80B321F5E54500E2A8B5 /* Assets.xcassets */,
 				008A80B521F5E54500E2A8B5 /* LaunchScreen.storyboard */,
 				008A80B821F5E54500E2A8B5 /* Info.plist */,
+				00B1527B21F621430016D197 /* GoogleService-Info.plist */,
 			);
 			path = WhatsappClone;
+			sourceTree = "<group>";
+		};
+		00B1528321F64CE60016D197 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				00B1528421F652BB0016D197 /* HelperFunctions.swift */,
+				00B1528121F64CE10016D197 /* CollectionReference.swift */,
+				00B1527D21F6243A0016D197 /* FUser.swift */,
+				00B1527F21F62A6B0016D197 /* Constants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		46C3C01A33950C67E5347B43 /* Pods */ = {
@@ -150,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				008A80B721F5E54500E2A8B5 /* LaunchScreen.storyboard in Resources */,
+				00B1527C21F621440016D197 /* GoogleService-Info.plist in Resources */,
 				008A80B421F5E54500E2A8B5 /* Assets.xcassets in Resources */,
 				008A80B221F5E54400E2A8B5 /* Main.storyboard in Resources */,
 			);
@@ -265,8 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B1527E21F6243B0016D197 /* FUser.swift in Sources */,
 				008A80AF21F5E54400E2A8B5 /* ViewController.swift in Sources */,
 				008A80AD21F5E54400E2A8B5 /* AppDelegate.swift in Sources */,
+				00B1528221F64CE10016D197 /* CollectionReference.swift in Sources */,
+				00B1528021F62A6B0016D197 /* Constants.swift in Sources */,
+				00B1528521F652BB0016D197 /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
