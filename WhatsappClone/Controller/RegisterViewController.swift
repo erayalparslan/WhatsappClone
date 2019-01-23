@@ -11,16 +11,20 @@ import UIKit
 class RegisterViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegates()
     }
+    
+    
+    
     
     
     

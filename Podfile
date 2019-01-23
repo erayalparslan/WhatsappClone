@@ -20,6 +20,6 @@ target 'WhatsappClone' do
   pod 'IDMPhotoBrowser'
   # pod 'ImagePicker'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
-
+  pod 'IQKeyboardManagerSwift'
   
 end

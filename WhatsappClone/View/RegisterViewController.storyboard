@@ -60,7 +60,7 @@
                                     <constraint firstItem="NKM-B5-wbX" firstAttribute="centerY" secondItem="Y66-Lo-Sq5" secondAttribute="centerY" id="zif-J5-U9p"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gCY-mb-9b5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="gCY-mb-9b5">
                                 <rect key="frame" x="137.5" y="103" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="SkR-NK-KIc"/>
@@ -132,8 +132,10 @@
                         <viewLayoutGuide key="safeArea" id="KvR-ly-fE6"/>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="SeQ-wN-0aX" id="IWe-VX-8wx"/>
                         <outlet property="cityTextField" destination="Yyi-1x-Rhj" id="Gnv-cS-jo8"/>
                         <outlet property="countryTextField" destination="9Ng-Xi-CkV" id="V99-uh-sdc"/>
+                        <outlet property="doneButton" destination="NKM-B5-wbX" id="OBw-Fi-xW1"/>
                         <outlet property="nameTextField" destination="laj-zz-ege" id="ZDp-wC-sPl"/>
                         <outlet property="phoneTextField" destination="tkl-s4-yCc" id="o2b-aT-uPn"/>
                         <outlet property="surnameTextField" destination="IZM-Aa-3h6" id="eyJ-wu-0n4"/>
@@ -145,4 +147,7 @@
             <point key="canvasLocation" x="-337" y="-295"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatarPlaceholder" width="101" height="101"/>
+    </resources>
 </document>
