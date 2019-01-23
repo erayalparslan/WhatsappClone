@@ -31,15 +31,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     
-    //MARK: Actions
+    //MARK: IBActions
     //===========================================================================
     //===========================================================================
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         closeKeyboard()
-        
+        print("register pressed")
         if !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && !repasswordTextField.text!.isEmpty {
-        
             if passwordTextField.text == repasswordTextField.text {
                 registerUser()
             }
@@ -50,7 +49,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         else {
             ProgressHUD.showError("Missing information")
         }
-        print("register pressed")
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
@@ -100,8 +98,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     func registerUser() {
-        clearTextFields(textFields: [emailTextField, passwordTextField, repasswordTextField])
         performSegue(withIdentifier: "register", sender: nil)
+        clearTextFields(textFields: [emailTextField, passwordTextField, repasswordTextField])
     }
     
     func openApp(){
@@ -109,8 +107,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         ProgressHUD.dismiss()
         clearTextFields(textFields: [emailTextField, passwordTextField, repasswordTextField])
     }
-    
-    
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -122,6 +118,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "register" {
+            let vc = segue.destination as! RegisterViewController
+            vc.mail = emailTextField.text    ?? "no_email"
+            vc.pass = passwordTextField.text ?? "no_password"
+        }
+    }
     
     
     

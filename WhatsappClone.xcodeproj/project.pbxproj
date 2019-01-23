@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001F5BDB21F8B5F800E3374B /* MainTabbarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001F5BDA21F8B5F800E3374B /* MainTabbarViewController.storyboard */; };
 		0024F1E821F849E400819B5B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024F1E721F849E400819B5B /* RegisterViewController.swift */; };
 		0024F1EC21F84A3600819B5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024F1EB21F84A3600819B5B /* LoginViewController.swift */; };
 		0024F1EE21F867B100819B5B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024F1ED21F867B100819B5B /* Protocols.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		001F5BDA21F8B5F800E3374B /* MainTabbarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabbarViewController.storyboard; sourceTree = "<group>"; };
 		0024F1E721F849E400819B5B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0024F1EB21F84A3600819B5B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0024F1ED21F867B100819B5B /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				008A80B021F5E54400E2A8B5 /* Main.storyboard */,
 				0024F1EF21F86EFD00819B5B /* RegisterViewController.storyboard */,
+				001F5BDA21F8B5F800E3374B /* MainTabbarViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001F5BDB21F8B5F800E3374B /* MainTabbarViewController.storyboard in Resources */,
 				008A80B721F5E54500E2A8B5 /* LaunchScreen.storyboard in Resources */,
 				00B1527C21F621440016D197 /* GoogleService-Info.plist in Resources */,
 				0024F1F021F86EFD00819B5B /* RegisterViewController.storyboard in Resources */,
