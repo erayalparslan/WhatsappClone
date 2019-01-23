@@ -41,8 +41,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         closeKeyboard()
         
-        if !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && !repasswordTextField.text!.isEmpty{
-            registerUser()
+        if !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && !repasswordTextField.text!.isEmpty {
+        
+            if passwordTextField.text == repasswordTextField.text {
+                registerUser()
+            }
+            else {
+                ProgressHUD.showError("Passwords do not match")
+            }
         }
         else {
             ProgressHUD.showError("Missing information")
@@ -62,7 +68,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             ProgressHUD.showError("Missing information")
         }
         
-        clearTextFields()
+        
         print("login pressed")
     }
     
@@ -83,11 +89,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //===========================================================================
     
     func loginUser(){
-        
+        ProgressHUD.show("Login...")
+        FUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
+            if error == nil {
+                self.openApp()
+            }
+            else {
+                ProgressHUD.showError(error!.localizedDescription)
+            }
+        }
     }
     
     func registerUser() {
         
+    }
+    
+    func openApp(){
+        print("the app is opened")
+        ProgressHUD.dismiss()
+        clearTextFields()
     }
     
     func setDelegates() {
