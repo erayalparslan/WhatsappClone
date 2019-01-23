@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gVW-87-OTy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="dCH-FZ-lCr">
+            <objects>
+                <viewController id="gVW-87-OTy" customClass="RegisterViewController" customModule="WhatsappClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LcF-M9-zbg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y66-Lo-Sq5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsh-cT-HhG">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="2"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="5Mk-Qc-Q0L"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0f-Y0-ao8">
+                                        <rect key="frame" x="160" y="27" width="55" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeQ-wN-0aX">
+                                        <rect key="frame" x="30" y="22.5" width="48" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <segue destination="MBl-tG-Bvb" kind="unwind" unwindAction="unwindToLoginWith_segue:" id="eLI-5f-f8Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKM-B5-wbX">
+                                        <rect key="frame" x="308" y="22.5" width="37" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="n0f-Y0-ao8" firstAttribute="centerY" secondItem="Y66-Lo-Sq5" secondAttribute="centerY" id="0gx-4i-FwQ"/>
+                                    <constraint firstItem="SeQ-wN-0aX" firstAttribute="centerY" secondItem="Y66-Lo-Sq5" secondAttribute="centerY" id="7eU-Cs-W86"/>
+                                    <constraint firstAttribute="bottom" secondItem="fsh-cT-HhG" secondAttribute="bottom" constant="1" id="8a1-sy-sXQ"/>
+                                    <constraint firstAttribute="height" constant="75" id="CyE-BH-mLh"/>
+                                    <constraint firstItem="SeQ-wN-0aX" firstAttribute="leading" secondItem="Y66-Lo-Sq5" secondAttribute="leading" constant="30" id="W8P-Xz-2c8"/>
+                                    <constraint firstItem="fsh-cT-HhG" firstAttribute="leading" secondItem="Y66-Lo-Sq5" secondAttribute="leading" id="Z16-no-GNq"/>
+                                    <constraint firstItem="n0f-Y0-ao8" firstAttribute="centerX" secondItem="Y66-Lo-Sq5" secondAttribute="centerX" id="dqO-9C-iuu"/>
+                                    <constraint firstAttribute="trailing" secondItem="NKM-B5-wbX" secondAttribute="trailing" constant="30" id="mgg-Wf-MkC"/>
+                                    <constraint firstAttribute="trailing" secondItem="fsh-cT-HhG" secondAttribute="trailing" id="vMp-1j-ExD"/>
+                                    <constraint firstItem="NKM-B5-wbX" firstAttribute="centerY" secondItem="Y66-Lo-Sq5" secondAttribute="centerY" id="zif-J5-U9p"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gCY-mb-9b5">
+                                <rect key="frame" x="137.5" y="103" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="SkR-NK-KIc"/>
+                                    <constraint firstAttribute="height" constant="100" id="XMP-26-I47"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="90t-eU-8LS">
+                                <rect key="frame" x="30" y="253" width="315" height="236"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="laj-zz-ege" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="39"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZM-Aa-3h6" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="49" width="315" height="39.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Surname"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ng-Xi-CkV" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="98.5" width="315" height="39"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="country-name"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Country"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yyi-1x-Rhj" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="147.5" width="315" height="39.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="address-level2"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="City"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tkl-s4-yCc" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="197" width="315" height="39"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Phone"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gCY-mb-9b5" firstAttribute="top" secondItem="Y66-Lo-Sq5" secondAttribute="bottom" constant="8" id="788-fD-JJO"/>
+                            <constraint firstItem="90t-eU-8LS" firstAttribute="leading" secondItem="KvR-ly-fE6" secondAttribute="leading" constant="30" id="CLa-OK-wgx"/>
+                            <constraint firstItem="KvR-ly-fE6" firstAttribute="trailing" secondItem="90t-eU-8LS" secondAttribute="trailing" constant="30" id="De6-Tn-eXL"/>
+                            <constraint firstItem="gCY-mb-9b5" firstAttribute="centerX" secondItem="LcF-M9-zbg" secondAttribute="centerX" id="HMM-uW-Hjq"/>
+                            <constraint firstItem="Y66-Lo-Sq5" firstAttribute="top" secondItem="KvR-ly-fE6" secondAttribute="top" id="Xju-Ey-dPt"/>
+                            <constraint firstItem="Y66-Lo-Sq5" firstAttribute="leading" secondItem="KvR-ly-fE6" secondAttribute="leading" id="ehA-eO-cL4"/>
+                            <constraint firstItem="90t-eU-8LS" firstAttribute="top" secondItem="gCY-mb-9b5" secondAttribute="bottom" constant="50" id="g3v-wA-V5b"/>
+                            <constraint firstItem="Y66-Lo-Sq5" firstAttribute="trailing" secondItem="KvR-ly-fE6" secondAttribute="trailing" id="qur-1w-tBE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KvR-ly-fE6"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="Yyi-1x-Rhj" id="Gnv-cS-jo8"/>
+                        <outlet property="countryTextField" destination="9Ng-Xi-CkV" id="V99-uh-sdc"/>
+                        <outlet property="nameTextField" destination="laj-zz-ege" id="ZDp-wC-sPl"/>
+                        <outlet property="phoneTextField" destination="tkl-s4-yCc" id="o2b-aT-uPn"/>
+                        <outlet property="surnameTextField" destination="IZM-Aa-3h6" id="eyJ-wu-0n4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jO4-Yl-bIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MBl-tG-Bvb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-337" y="-295"/>
+        </scene>
+    </scenes>
+</document>

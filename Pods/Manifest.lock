@@ -131,6 +131,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - SkyFloatingLabelTextField (3.6.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -143,6 +144,7 @@ DEPENDENCIES:
   - JSQMessagesViewController (= 7.3.3)
   - MBProgressHUD
   - ProgressHUD
+  - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -174,6 +176,7 @@ SPEC REPOS:
     - Protobuf
     - SCSiriWaveformView
     - SDWebImage
+    - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
@@ -204,7 +207,8 @@ SPEC CHECKSUMS:
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SCSiriWaveformView: 15b9dd6f94c7536e2032b34a35c6ff74d38c7411
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
 
-PODFILE CHECKSUM: 02e43ef7d9578a8168b99948c5ea9fd8354788f7
+PODFILE CHECKSUM: 3540c62026329a35aafe9a0a48048e1aef6d3e08
 
 COCOAPODS: 1.5.3

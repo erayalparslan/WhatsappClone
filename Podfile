@@ -19,6 +19,7 @@ target 'WhatsappClone' do
   pod 'JSQMessagesViewController', '7.3.3'
   pod 'IDMPhotoBrowser'
   # pod 'ImagePicker'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
 
   
 end

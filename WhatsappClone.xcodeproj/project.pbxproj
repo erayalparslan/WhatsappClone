@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0024F1E821F849E400819B5B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024F1E721F849E400819B5B /* RegisterViewController.swift */; };
+		0024F1EC21F84A3600819B5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024F1EB21F84A3600819B5B /* LoginViewController.swift */; };
+		0024F1EE21F867B100819B5B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024F1ED21F867B100819B5B /* Protocols.swift */; };
+		0024F1F021F86EFD00819B5B /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0024F1EF21F86EFD00819B5B /* RegisterViewController.storyboard */; };
 		008A80AD21F5E54400E2A8B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A80AC21F5E54400E2A8B5 /* AppDelegate.swift */; };
-		008A80AF21F5E54400E2A8B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A80AE21F5E54400E2A8B5 /* ViewController.swift */; };
 		008A80B221F5E54400E2A8B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008A80B021F5E54400E2A8B5 /* Main.storyboard */; };
 		008A80B421F5E54500E2A8B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008A80B321F5E54500E2A8B5 /* Assets.xcassets */; };
 		008A80B721F5E54500E2A8B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008A80B521F5E54500E2A8B5 /* LaunchScreen.storyboard */; };
@@ -21,9 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0024F1E721F849E400819B5B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0024F1EB21F84A3600819B5B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0024F1ED21F867B100819B5B /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		0024F1EF21F86EFD00819B5B /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 		008A80A921F5E54400E2A8B5 /* WhatsappClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsappClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		008A80AC21F5E54400E2A8B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		008A80AE21F5E54400E2A8B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		008A80B121F5E54400E2A8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		008A80B321F5E54500E2A8B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		008A80B621F5E54500E2A8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +56,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0024F1E121F83BB300819B5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				008A80B021F5E54400E2A8B5 /* Main.storyboard */,
+				0024F1EF21F86EFD00819B5B /* RegisterViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0024F1E421F842AB00819B5B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0024F1EB21F84A3600819B5B /* LoginViewController.swift */,
+				0024F1E721F849E400819B5B /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		008A80A021F5E54400E2A8B5 = {
 			isa = PBXGroup;
 			children = (
@@ -71,10 +95,10 @@
 		008A80AB21F5E54400E2A8B5 /* WhatsappClone */ = {
 			isa = PBXGroup;
 			children = (
+				0024F1E421F842AB00819B5B /* Controller */,
+				0024F1E121F83BB300819B5B /* View */,
 				00B1528321F64CE60016D197 /* Helper */,
 				008A80AC21F5E54400E2A8B5 /* AppDelegate.swift */,
-				008A80AE21F5E54400E2A8B5 /* ViewController.swift */,
-				008A80B021F5E54400E2A8B5 /* Main.storyboard */,
 				008A80B321F5E54500E2A8B5 /* Assets.xcassets */,
 				008A80B521F5E54500E2A8B5 /* LaunchScreen.storyboard */,
 				008A80B821F5E54500E2A8B5 /* Info.plist */,
@@ -90,6 +114,7 @@
 				00B1528121F64CE10016D197 /* CollectionReference.swift */,
 				00B1527D21F6243A0016D197 /* FUser.swift */,
 				00B1527F21F62A6B0016D197 /* Constants.swift */,
+				0024F1ED21F867B100819B5B /* Protocols.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -174,6 +199,7 @@
 			files = (
 				008A80B721F5E54500E2A8B5 /* LaunchScreen.storyboard in Resources */,
 				00B1527C21F621440016D197 /* GoogleService-Info.plist in Resources */,
+				0024F1F021F86EFD00819B5B /* RegisterViewController.storyboard in Resources */,
 				008A80B421F5E54500E2A8B5 /* Assets.xcassets in Resources */,
 				008A80B221F5E54400E2A8B5 /* Main.storyboard in Resources */,
 			);
@@ -248,6 +274,7 @@
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SCSiriWaveformView/SCSiriWaveformView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -271,6 +298,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSiriWaveformView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -289,12 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0024F1EC21F84A3600819B5B /* LoginViewController.swift in Sources */,
 				00B1527E21F6243B0016D197 /* FUser.swift in Sources */,
-				008A80AF21F5E54400E2A8B5 /* ViewController.swift in Sources */,
+				0024F1E821F849E400819B5B /* RegisterViewController.swift in Sources */,
 				008A80AD21F5E54400E2A8B5 /* AppDelegate.swift in Sources */,
 				00B1528221F64CE10016D197 /* CollectionReference.swift in Sources */,
 				00B1528021F62A6B0016D197 /* Constants.swift in Sources */,
 				00B1528521F652BB0016D197 /* HelperFunctions.swift in Sources */,
+				0024F1EE21F867B100819B5B /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,24 @@ import Foundation
 import UIKit
 import FirebaseFirestore
 
+
+
+extension UIViewController {
+    func closeKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    func clearTextFields(textFields: [UITextField]){
+        for textField in textFields {
+            textField.text = ""
+        }
+    }
+}
+
+
 //MARK: GLOBAL FUNCTIONS
 private let dateFormat = "yyyyMMddHHmmss"
+
 
 func dateFormatter() -> DateFormatter {
     
@@ -115,7 +131,7 @@ func dictionaryFromSnapshots(snapshots: [DocumentSnapshot]) -> [NSDictionary] {
     
     var allMessages: [NSDictionary] = []
     for snapshot in snapshots {
-        allMessages.append(snapshot.data() as! NSDictionary)
+        allMessages.append(snapshot.data()! as NSDictionary)
     }
     return allMessages
 }

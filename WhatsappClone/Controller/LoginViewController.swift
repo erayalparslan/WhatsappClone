@@ -10,7 +10,7 @@ import UIKit
 import ProgressHUD
 
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -21,9 +21,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        setDelegates()
-        
         
     }
     
@@ -53,8 +50,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         else {
             ProgressHUD.showError("Missing information")
         }
-        
-        clearTextFields()
         print("register pressed")
     }
     
@@ -72,6 +67,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("login pressed")
     }
     
+    @IBAction func unwindToLogin(_segue: UIStoryboardSegue){
+        
+    }
     
     
     
@@ -100,31 +98,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
     func registerUser() {
-        
+        clearTextFields(textFields: [emailTextField, passwordTextField, repasswordTextField])
+        performSegue(withIdentifier: "register", sender: nil)
     }
     
     func openApp(){
         print("the app is opened")
         ProgressHUD.dismiss()
-        clearTextFields()
+        clearTextFields(textFields: [emailTextField, passwordTextField, repasswordTextField])
     }
     
-    func setDelegates() {
-        emailTextField.delegate      = self
-        passwordTextField.delegate   = self
-        repasswordTextField.delegate = self
-    }
     
-    func closeKeyboard() {
-        self.view.endEditing(true)
-    }
     
-    func clearTextFields() {
-        emailTextField.text         = ""
-        passwordTextField.text      = ""
-        repasswordTextField.text    = ""
-    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -133,6 +120,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
 
     
     
@@ -140,3 +128,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 }
 
+extension LoginViewController: BaseFunctions {
+    func setDelegates() {
+        emailTextField.delegate      = self
+        passwordTextField.delegate   = self
+        repasswordTextField.delegate = self
+    }
+}
