@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ProgressHUD
+
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -27,23 +29,48 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     
+    
+    
+    
+    
+    
     //MARK: Actions
     //===========================================================================
     //===========================================================================
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
+        closeKeyboard()
+        
+        if !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && !repasswordTextField.text!.isEmpty{
+            registerUser()
+        }
+        else {
+            ProgressHUD.showError("Missing information")
+        }
         
         clearTextFields()
-        closeKeyboard()
         print("register pressed")
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        closeKeyboard()
+        
+        if !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty {
+            loginUser()
+        }
+        else {
+            ProgressHUD.showError("Missing information")
+        }
         
         clearTextFields()
-        closeKeyboard()
         print("login pressed")
     }
+    
+    
+    
+    
+    
+    
     
     
     
@@ -54,6 +81,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: Methods
     //===========================================================================
     //===========================================================================
+    
+    func loginUser(){
+        
+    }
+    
+    func registerUser() {
+        
+    }
     
     func setDelegates() {
         emailTextField.delegate      = self
